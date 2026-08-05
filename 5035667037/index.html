@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap" rel="stylesheet">
+
+
+    <!-- Page css -->
+    <link rel="stylesheet" href="assets/lib/iti.min.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/sass/style.min.css">
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-54QZG4W');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+        var urlVars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            urlVars[key.toLowerCase()] = value;
+        });
+        if (urlVars['istest']) {
+            location.href = '/aserving/_blank.htm';
+        }
+    </script>
+
+    <title>TradeApp</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54QZG4W" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="cmt" hidden></div>
+    <div class="logo">
+        <div class="py-1 logo-wrapper text-center text-sm-left">
+            <a href="https://www.tradeapp.com" target="_blank">
+                <img src="./images/logo.png" class="img-fluid main-logo my-2" alt="logo" loading="lazy">
+            </a>
+        </div>
+    </div>
+    <header>
+
+        <picture>
+            <source srcset="./images/header-tablet.webp" type="image/webp">
+            <source srcset="./images/header-tablet.jpg" type="image/jpeg">
+            <img src="images/header-tablet.jpg" width="1199" height="581" loading="lazy"
+                class="img-fluid w-100 d-none d-sm-block d-md-block d-xl-none my-0 lp-action">
+        </picture>
+        <div class="header container-fluid h-100">
+            <div class="container-content container-fluid">
+                <div class=" px-0 content-wrapper">
+                    <div class="content lp-action mb-sm-0">
+                        <h1>
+                            Empower Your <br class="d-blok d-xl-none"><span>Trading Journey</span>
+                        </h1>
+                        <p>Join a Prop firm built for growth, transparency, and long-term success!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container mt-0 desktopForm-quiz-container" id="desktopForm">
+
+            <section class="form-container mt-lg-4 mb-0" id="desktopFormSection">
+
+                <form autocomplete="off" method="post" id="mainForm" class="py-5 py-xl-3 main-form" novalidate>
+                        <div class="form-wrapper user-inputs pt-3 row">
+                            <div class="col-12 col-md-4 col-xl-12 order-md-1">
+                                <div class="form-group">
+                                    <label for="goals">
+                                        Are you new to trading?
+                                    </label>
+                                    <select name="goals" id="goals" class="form-control first-form-select">
+                                        <option value="Select an option">Select an option</option>
+                                        <option value="I have no experience">
+                                            I have no experience
+                                        </option>
+                                        <option value="I have little experience">
+                                            I have little experience
+                                        </option>
+                                        <option value="I am experienced">
+                                            I am experienced
+                                        </option>
+                                    </select>
+                                    <p class="d-none select-error">Select an option</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="forecast">
+                                        What amount are you willing to invest?
+                                    </label>
+                                    <select name="forecast" id="forecast" class="form-control first-form-select">
+                                        <option value="$200 - $500">$200 - $500</option>
+                                        <option value="$500 - $1500">$500 - $1500</option>
+                                        <option value="More than $1500">More than $1500</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="income">
+                                        What type of trading are you pursuing?
+                                    </label>
+                                    <select name="income" id="income" class="form-control first-form-select">
+                                        <option value="Day trading - making fast profits on a daily basis">Day
+                                            trading - making fast profits on a daily basis</option>
+                                        <option
+                                            value="Long-term investing - Making slower but steady profits over a bigger period of time">
+                                            Long-term investing - Making slower but steady profits over a bigger
+                                            period of time</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-xl-12 order-md-6 order-xl-6">
+                                <div class="form-group lp-main_btn mb-1">
+                                    <!-- <a href="https://signup.tradeapp.com/"> -->
+                                    <button class="reg-btn firstQuestion">
+                                        Start your challenge
+                                        <img src="./images/arrow-right.png" alt="arrow-right">
+                                    </button>
+                                    <!-- </a> -->
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </section>
+        </div>
+
+        <img class="mx-auto d-block d-sm-none header-img" src="./images/header-pic.png" alt="">
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="row nav-row">
+                <div class="links">
+                    <p>
+                        <a href="https://www.tradeapp.com/about-us/legal-documents#privacy" target="_blank"
+                            rel="noopener">
+                            Privacy Policy
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.tradeapp.com/about-us/legal-documents#cookies" target="_blank"
+                            rel="noopener">
+                            Cookies policy
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.tradeapp.com/about-us/contact-us" target="_blank" rel="noopener">Contact
+                            us</a>
+                    </p>
+                    <p>
+                        <a href="https://www.tradeapp.com/about-us/legal-documents#terms" target="_blank"
+                            rel="noopener">
+                            Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <script id="nxreg-thankYou-wl-template" type="text/x-handlebars-template">
+        <div class="overlay" id="thankYouPage" style="display: block;">
+            <div class="container px-0 d-flex align-items-center">
+                <div class="thank-you-msg d-flex align-items-center flex-column">
+                    <div class="img-wrapp">
+                        <img src="./images/thanks-img.png" class="img-fluid" alt="thank you img" loading="lazy" width="90" height="90">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!-- Helpers Js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
+
+    <script src="/scripts/legal_data.js" defer></script>
+    <script src="/scripts/helper_002.js" defer></script>
+    <script src="/scripts/plexop_api_2.0.js" defer></script>
+
+    <script src="/nx-scripts/external/handlebars/handlebars.min.js" defer></script>
+    <script src="/nx-scripts/external/intl-tel-input/js/intlTelInput-jquery.min.js" defer></script>
+    <script src="/nx-scripts/nxreg/nxreg.min.js" defer></script>
+    <script src="./scripts/script.min.js" defer></script>
+
+    </div>
+</body>
+
+</html>
