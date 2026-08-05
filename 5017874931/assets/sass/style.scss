@@ -1,0 +1,295 @@
+$main-color: #393939;
+$buttons-color: #ff5f00;
+
+$max-width-const: 1164px;
+$max-mobile-width-const: 90%;
+$main-font: "Cairo";
+
+@function get-vw($px-vw, $base-vw: 1292px) {
+  @return calc(($px-vw * 100vw) / $base-vw);
+}
+
+@mixin get-fs-lh($font-size-in-px, $line-height-in-px, $base) {
+  font-size: get-vw($font-size-in-px, $base);
+  line-height: get-vw($line-height-in-px, $base);
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  color: $main-color;
+  background-color: #FAFAFA;
+
+  a[rel="nofollow"] {
+    position: fixed !important;
+  }
+}
+
+.header {
+  @media screen and (min-width: 1200px) {
+    background: url('../../images/header-desktop.png') no-repeat center;
+    background-size: cover;
+    background-position: center;
+    height: 480px !important;
+  }
+
+  .container-content {
+    top: 0;
+    position: absolute;
+
+    .content {
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      padding-top: 13vw;
+
+      @media screen and (min-width: 576px) {
+        padding-top: 5vw;
+      }
+
+      @media screen and (min-width: 1200px) {
+        padding: 2rem 0 0;
+
+        max-width: 748px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-family: 'Poppins', sans-serif;
+        color: #435883;
+        font-weight: 700;
+        @include get-fs-lh(33.476px, 32.806px, 375px);
+        text-align: center;
+        max-width: 66vw;
+        margin: 0 auto 7vw;
+
+
+        @media screen and (min-width: 576px) {
+          margin: 0 auto 5vw;
+          @include get-fs-lh(50px, 49px, 1024px);
+          max-width: 50vw;
+        }
+
+        @media screen and (min-width: 1200px) {
+          margin-bottom: 2rem;
+          font-size: 80px;
+          line-height: 78.4px;
+          max-width: 748px;
+
+        }
+      }
+
+      .sec-title {
+        // display: inline-block;
+        background-color: #0057ff;
+        padding: 0.8rem 2rem;
+        clip-path: polygon(10% 0%, 90% 0%, 100% 90%, 0% 100%);
+        width: 44vw;
+        margin: 0 auto;
+
+        @media screen and (min-width: 576px) {
+          width: 30vw;
+
+        }
+
+        @media screen and (min-width: 1200px) {
+          width: 406.42px;
+        }
+      }
+
+
+      h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #FFF;
+        font-weight: 400;
+        @include get-fs-lh(16.973px, 23.762px, 375px);
+        text-align: center;
+        margin-bottom: 0;
+
+        @media screen and (min-width: 576px) {
+          margin: 0;
+          @include get-fs-lh(26.975px, 37.765px, 1024px);
+        }
+
+        @media screen and (min-width: 1200px) {
+          font-size: 35px;
+          line-height: 49px;
+
+        }
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        color: #435883;
+        font-weight: 300;
+        @include get-fs-lh(18px, 21.6px, 375px);
+        max-width: 68vw;
+        text-align: center;
+        margin: 7vw auto 0;
+
+
+        @media screen and (min-width: 576px) {
+          margin: 3vw auto 0;
+          @include get-fs-lh(20px, 19.6px, 1024px);
+
+        }
+
+        @media screen and (min-width: 1200px) {
+          font-size: 20px;
+          line-height: 19.6px;
+          margin: 2rem auto 0;
+
+        }
+      }
+
+    }
+  }
+}
+
+
+main {
+
+  font-family: $main-font;
+
+  .questionnaire {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    margin-top: -150px;
+    position: absolute;
+    padding-bottom: 10rem;
+
+    @media screen and (min-width: 576px) {
+      margin-top: -94px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: -125px;
+    }
+
+    @media screen and (min-width: 992px) {
+      margin-top: -157px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-top: -108px;
+    }
+
+    .question {
+      margin-bottom: 2rem;
+
+      label {
+        color: #303030;
+        display: block;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 25.3px;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 1200px) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .option {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+        border-radius: 5px;
+        background: #EAF0F7;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 18px;
+        font-weight: 400;
+        color: #303030;
+        width: 338px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.selected {
+          background: #6498D6;
+          color: #FFF;
+          font-weight: 700;
+        }
+      }
+
+      .two-columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        justify-items: center;
+
+        .option {
+          margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+          margin: 0 auto;
+          grid-template-columns: 1fr 1fr;
+          max-width: 500px;
+          justify-content: center;
+        }
+      }
+    }
+
+    .submit-btn {
+      display: block;
+      margin: 0 auto;
+      width: 331px;
+      padding: 1rem;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 55px;
+      background: #0050F9;
+
+      // &:hover {
+      //   background: darken($primary-color, 5%);
+      // }
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+
+    .questionnaire {
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      .subheading {
+        margin-bottom: 2.5rem;
+      }
+
+      .question {
+        margin-bottom: 2.5rem;
+
+        .option {
+          padding: 1.25rem;
+        }
+      }
+
+      .submit-btn {
+        padding: 1.2rem;
+      }
+    }
+
+    .question.two-columns {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+}
