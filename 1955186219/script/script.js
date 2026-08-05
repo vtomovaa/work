@@ -1,0 +1,15 @@
+(function ($) {
+	"use strict";
+    $(window).on("load", function () {
+		const language = document.querySelector('html').getAttribute('lang');
+		
+        $.getJSON("/assets/TradeApp_Prop/" + language + "/LP.json", function (json) {
+			PlexopAPI.setAdvertiser(json["_PAdvertiser"]);
+            PlexopAPI.setUnknown(json["_PUnknown"]);
+            PlexopAPI.setBdomain(json["_PBDomain"]);
+            PlexopAPI.setA(json["_PA"]);
+            PlexopAPI.sendVisit();
+			var ld = new LegalData('TradeApp_Prop', language);
+        });
+    });
+}(jQuery));
