@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Page css -->
+    <link rel="stylesheet" href="assets/lib/iti.min.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/sass/style.min.css">
+
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5VMQCMDJ');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- <script>
+        var urlVars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            urlVars[key.toLowerCase()] = value;
+        });
+        if (urlVars['istest']) {
+            location.href = '/aserving/_blank.htm';
+        }
+    </script> -->
+    <script>
+        var userConfigs = {
+            isInstant: 'yes',
+            isPopUp: 'yes',
+            hideArticle: 'no',
+            hideCalculator: 'yes',
+        }
+    </script>
+
+    <title>BrainTrade</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VMQCMDJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="cmt" hidden></div>
+
+    <header>
+
+        <div class="col-12 text-center upper-logo">
+            <a href="https://thebraintrade.com/it/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/logo.png" class="img-fluid main-logo top-logo" alt="logo" width="230" height="36.46"
+                    loading="lazy">
+            </a>
+        </div>
+
+        <div class="header container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 position-relative px-0">
+                    <picture>
+                        <source srcset="./images/header-mobile.webp" type="image/webp">
+                        <source srcset="./images/header-mobile.jpg" type="image/jpeg">
+                        <img src="images/header-mobile.jpg" width="375" height="430" loading="lazy"
+                            class="img-fluid d-block d-xs-block d-sm-none w-100 lp-action m-0 mobile-img">
+                    </picture>
+                    <picture>
+                        <source srcset="./images/header-tablet.webp" type="image/webp">
+                        <source srcset="./images/header-tablet.jpg" type="image/jpeg">
+                        <img src="images/header-tablet.jpg" width="768" height="507" loading="lazy"
+                            class="img-fluid w-100 d-none d-sm-block d-md-block d-xl-none my-0 lp-action">
+                    </picture>
+                    <div class="container-content container-fluid">
+                        <div class="row h-100">
+                            <div class="col-12 px-0">
+                                <div class="content lp-action">
+
+
+                                    <h1 class="lp-action">
+                                        Inizia il tuo percorso nel mondo degli investimenti con un <span
+                                            style="color: #ff7532;">ebook
+                                            gratuito!</span>
+                                    </h1>
+
+                                    <p class="lp-action">
+                                        Presso Braintrade Academy imparerai strategie vincenti e come utilizzare
+                                        strumenti di investimento intelligenti dai migliori esperti.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3 mt-lg-0 desktopForm-container">
+            <section class="form-container mt-lg-4" id="desktopForm">
+                <div class="nxreg">
+                    <div class="nxreg-form-loader-ctr">
+                        <div class="nxreg-form-loader"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="book">
+
+            <div class="section-wrapper">
+                <img src="./images/book.png" alt="">
+
+                <div class="book-content">
+                    <h3>
+                        Scarica subito il nostro
+                        eBook GRATUITO!
+
+                    </h3>
+
+                    <p>L'offerta scade tra:</p>
+
+                    <div class="col-12 mt-3 mb-3 timer">
+                        <div class="warning-sign">
+
+                            <p class="warning-sign-text mb-0">
+                                <span class="d-none" id="date"></span>
+                                <b class="runningOutTime" id="time"
+                                    style="font-weight: 700; color: #ff7532;">00:00:00</b>
+                            </p>
+
+                            <p class="mb-0 " style="text-align: center;color: #ff7532;">
+                                <span class="mr-2" id="hours">giorni</span>
+                                <span class="mr-2" id="minutes">ore</span>
+                                <span id="seconds">minuti</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="book-text">
+                        <h5>
+                            Cosa otterrai con questo ebook:
+                        </h5>
+
+                        <div>
+                            <div class="dot-content">
+                                <img src="./images/dot.png" alt="">
+                                <p>
+                                    <strong>Strategie di livello</strong> professionale da applicare subito.
+                                </p>
+                            </div>
+                            <div class="dot-content">
+                                <img src="./images/dot.png" alt="">
+                                <p>
+                                    <strong>Come sfruttare trend</strong> come l'Effetto Gennaio e il Rally di Natale.
+                                </p>
+                            </div>
+                            <div class="dot-content">
+                                <img src="./images/dot.png" alt="">
+                                <p>
+                                    <strong>Perché le crisi –</strong> come guerre o inflazione <strong> – possono
+                                        essere occasioni d'oro.</strong>
+                                </p>
+                            </div>
+                            <div class="dot-content">
+                                <img src="./images/dot.png" alt="">
+                                <p>
+                                    <strong>Una nuova prospettiva su crypto,</strong> Web 3.0 e i futuri giganti della
+                                    tecnologia.
+                                </p>
+                            </div>
+                            <div class="dot-content">
+                                <img src="./images/dot.png" alt="">
+                                <p>
+                                    <strong>Come pensare
+                                        controcorrente</strong> ed effettuare mosse più intelligenti.
+
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12">
+                <button type="button" class="cta-btn lp-action mt-4">
+                    Ottieni un ebook GRATUITO
+                </button>
+            </div>
+
+        </section>
+
+        <section class="boxes">
+
+            <div class="boxes-title">
+                <div class="boxes-title-cont">
+                    <h5>5</h5>
+                    <p>Solidi motivi per padroneggiare il trading online
+                    </p>
+                </div>
+                <img src="./images/boxes-img.png" alt="">
+            </div>
+
+
+            <div class="boxes-section">
+                <div class="box">
+                    <div class="header-number">
+                        <h5>1</h5>
+                    </div>
+                    <div class="header">
+                        <h3>Raggiungi l’indipendenza finanziaria</h3>
+                        <p>Scopri come accedere facilmente ai mercati globali e investire da qualsiasi luogo con una
+                            connessione Internet.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="header-number">
+                        <h5>2</h5>
+                    </div>
+                    <div class="header">
+                        <h3>Fai lavorare i tuoi soldi per te</h3>
+                        <p>Invece di affidarti solo a fondi pensione o banche tradizionali, il trading online ti
+                            permette di gestire attivamente i tuoi risparmi, con più flessibilità e maggiori possibilità
+                            di rendimento.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="header-number">
+                        <h5>3</h5>
+                    </div>
+                    <div class="header">
+                        <h3>Costruisci un flusso di reddito flessibile</h3>
+                        <p>Che tu lo faccia part-time o a tempo pieno, il trading online offre l’opportunità di generare
+                            profitti con orari adatti al tuo stile di vita.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="header-number">
+                        <h5>4</h5>
+                    </div>
+                    <div class="header">
+                        <h3>Rimani aggiornato con approfondimenti di mercato in tempo reale</h3>
+                        <p>Accedi a notizie, grafici e strumenti di analisi sempre aggiornati, per cogliere le
+                            opportunità appena si presentano.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="header-number">
+                        <h5>5</h5>
+                    </div>
+                    <div class="header">
+                        <h3>Acquisisci competenze preziose per tutta la vita</h3>
+                        <p>
+                            Capire come funzionano i mercati ti aiuta a sviluppare pensiero critico, gestione del
+                            rischio e capacità analitiche utili in ogni ambito.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="phone-section col-12">
+            <div>
+                <h3 class="section-title">Massimizza il tuo potenziale</h3>
+                <p>
+                    Ricevi un ebook gratuito e l’accesso alla nostra piattaforma — ti contatteremo telefonicamente.
+                    Approfitta di risorse educative e approfondimenti per far crescere le tue competenze.
+                </p>
+                <button type="button" class="lp-action">Ottieni un ebook GRATUITO</button>
+            </div>
+            <img src="./images/phone-u.png" loading="lazy"
+                class="img-fluid lp-action article-img d-none d-lg-block d-xl-block" alt="phone image">
+        </section>
+    </main>
+
+    <!-- pop up form -->
+    <div class="overlay-1">
+        <div class="form-container mt-5" id="popUpForm">
+        </div>
+    </div>
+    <div class="overlay-1 thank-you">
+
+        <div class="col-12 text-center upper-logo">
+            <a href="https://thebraintrade.com/it/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/logo.png" class="img-fluid main-logo top-logo" alt="logo" width="230" height="36.46"
+                    loading="lazy">
+            </a>
+        </div>
+
+        <div class="thank-you-content">
+            <div>
+                <h3>Grazie per la registrazione!</h3>
+                <h2>Hai fatto il primo passo nel tuo percorso con Braintrade Academy.</h2>
+                <div class="thanks">
+                    <div class="thank-you-inform">
+                        <img src="./images/mail.png" alt="">
+                        <div>
+                            <p><strong>La tua registrazione è stata completata</strong>
+                            </p>
+                            <p class="th-email"></p>
+                            <p class="th-pass"></p>
+                            <p>Salva questa password per accedere a Braintrade e scaricare il tuo
+                                ebook.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="thank-you-inform">
+                        <img src="./images/call.png" alt="">
+                        <p>
+                            <strong>Presto uno dei nostri trainer ti contatterà per guidarti ulteriormente.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <a href="" class="th-btn">
+                    <button>Vai a Braintrade</button>
+                    <a>
+            </div>
+            <img class="book-img" src="./images/book.png" alt="">
+
+        </div>
+    </div>
+    <!-- end pop up form -->
+
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-1 text-center">
+                    <a href="https://thebraintrade.com/it/ target=" _blank" rel="noopener noreferrer">
+                        <img src="./images/logo.png" class="img-fluid main-logo bottom-logo" alt="logo" width="164"
+                            height="26" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 nav-row">
+                    <br>
+                    <div>
+                        <p>
+                            <a href="https://preg.thebraintrade.com/assets/BrainTrade/it/Documents/Terms_and_conditions_IT.pdf"
+                                target="_blank">
+                                Termini e condizioni
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://preg.thebraintrade.com/assets/BrainTrade/it/Documents/Privacy_Policy_IT.pdf"
+                                target="_blank" class="my-1 my-lg-0">Informativa sulla privacy</a>
+                        </p>
+                        <p>
+                            <a href="https://it.thebraintrade.com/#contact-section" target="_blank">Contattaci</a>
+                        </p>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-12" class="disclaimer">
+                    <div data-lgl="disclaimer" class="disclaimer-ctr">Disclaimer</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script id="nxreg-sign-up-template" type="text/x-handlebars-template">
+        <div class="nx-signup nxreg-form">
+            <span class="close-popUpForm"><img src="./images/ic_cancel.png" alt=""></span>
+            <div class="nx-signup-form nx-signup__form">
+                <form autocomplete="off" method="post" action="#" id="mainForm" class="nxreg-sign-up-form needs-validation main-form" novalidate>
+                    <input type="hidden" name="recaptcha-token" id="recaptcha-token" value="" />
+                    
+                    <div class="form-heading-ctr">
+                        <h2 class="text-center form-text-h2">Dai slancio al tuo futuro finanziario oggi!</h2>
+                    
+                    </div>
+                    
+                    <div class="form-wrapper user-inputs pt-3 row">
+                        <div class="col-12 col-md-4 col-xl-12 order-md-1">
+                            {{#ifEquals settings.nxReg_FullName "true"}}
+                            <div class="form-group nx-form-group">
+                                <input autocomplete="false" type="text" class="form-control form-control-lg nxreg-sign-up-full-name" id="fullname" name="RegistrationModel.FullName" placeholder="{{strings.nxReg_i18n_SignUp_FullName}}" pattern="{{settings.nxReg_Validation_FullNameRegEx}}" required>
+                                <div class="invalid-feedback">
+                                    {{strings.nxReg_i18n_SignUp_FullNameError}}
+                                </div>
+                            </div>
+                            {{/ifEquals}}
+                        </div>
+
+                        <div class="col-12 col-md-4 col-xl-12 order-md-2 order-xl-2">
+                            <div class="form-group nx-form-group">
+                                <input autocomplete="false" type="email" class="form-control form-control-lg nxreg-sign-up-email" id="email" name="RegistrationModel.Email" placeholder="{{strings.nxReg_i18n_SignUp_Email}}" pattern="{{settings.nxReg_Validation_EmailRegEx}}" dir="ltr" required>
+                                <div class="invalid-feedback">
+                                    {{strings.nxReg_i18n_SignUp_EmailWrongFormatError}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-xl-12 order-md-3 order-xl-3">
+                            {{#ifEquals settings.nxReg_PhoneNumber "true"}}
+                                <div class="form-group nxreg-sign-up-phone-number-wrapper">
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control form-control-lg nxreg-sign-up-phone-number" id="phone-number" placeholder="{{strings.nxReg_i18n_SignUp_PhoneNumber}}" required>
+                                        <div class="invalid-feedback nxreg-sign-up-phone-number-error">
+                                            {{strings.nxReg_i18n_SignUp_PhoneNumberErrors.[4]}}
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/ifEquals}}
+                        </div>
+
+                
+                        <div class="col-12 col-md-4 col-xl-12 order-md-5 order-xl-5">
+                            {{#ifEquals settings.nxReg_PrivacyNoticeCheckbox "true"}}
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">         
+                                    <input type="checkbox" class="custom-control-input" id="privacy-notice" name="RegistrationModel.PrivacyNotice" required>
+                                    <label class="switch mt-1 mt-md-0 mt-xl-1" for="privacy-notice">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="terms-link col" data-lgl="gdpr-terms" for="privacy-notice"> I Agree</span>
+                                    <div class="invalid-feedback mt-2">
+                                        {{strings.nxReg_i18n_SignUp_PrivacyNoticeNotAcceptedError}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{else}}
+                            <div class="form-group">
+                                <div class="mt-4 mb-4">
+                                    {{{settings.nxReg_PrivacyNoticeText}}}
+                                </div>
+                            </div>
+                            {{/ifEquals}}
+                        </div>
+
+                        <div class="col-12 col-md-4 col-xl-12 order-md-6 order-xl-6">
+                            <div class="form-group lp-main_btn mb-1">
+                                <button type="submit" class="reg-btn g">Ottieni un ebook GRATUITO</button>
+                                <!-- <button type="submit" class="reg-btn pop-up-button">INVIA</button> -->
+                            </div>
+
+                            {{#ifEquals settings.nxReg_VerificationCode "true"}}
+                            <div class="row">
+                                <div class="col-12 vcwrp-1">
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="verification-code-toggle">
+                                            <label class="custom-control-label nxreg-sign-up-verification-code-toggle" for="verification-code-toggle">{{strings.nxReg_i18n_SignUp_VerificationCodeToggle}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vcwrp-2">
+                                    <div class="form-group nxreg-sign-up-verification-code-wrapper d-none">
+                                        <label for="verification-code" class=""></label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control nxreg-sign-up-verification-code" id="verification-code" pattern="{{settings.nxReg_Validation_VerificationCode}}" placeholder="">
+                                            <div class="invalid-feedback nxreg-sign-up-verification-code-error">
+                                                {{strings.nxReg_i18n_SignUp_VerificationCodeError}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/ifEquals}}
+                        </div>
+
+                        <div class="col-12 server-error-body align-self-center order-md-9 order-xl-7">
+                            <div id="msgContainer" class="nxreg-server-error-wrapper"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script>
+
+    <script id="nxreg-thankYou-wl-template" type="text/x-handlebars-template">
+        <div class="overlay" id="thankYouPage" style="display: block;">
+            <div class="container px-0 d-flex align-items-center">
+                <div class="row thank-you-msg d-flex align-items-center">
+                    <div class=" col-12 col-lg-4 img-wrapp order-1 order-lg-2">
+                        <img src="./images/thanks-img.png" class="img-fluid" alt="thank you img">
+                    </div>
+
+                    <div class="col-12 col-lg-8 msg-wrapp order-2 order-lg-1">
+                    <br class="d-none d-lg-block">
+                    <h3> CONGRATULAZIONI </h3>
+                    <br>
+                    <p>Grazie per esserti registrato <br> Verrai contattato entro <strong>24/48 ore</strong></p>
+                    
+                    <p>Non perdere d’occhio il tuo telefono! <img src="./images/emoji.png" alt="emoji img"></p>
+                    <br>
+                    <a href="javascript:window.location.reload(true)" class="confirm" id="confirm"><strong>OK</strong></a>
+                    <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="nxreg-sign-up-password-template" type="text/x-handlebars-template">
+        <div class="nx-signup  respond-card">
+
+            <div class="nx-signup-form nx-signup__form card-respond-wrapper">
+
+                <h5>Twoja rejestracja zakończyła się sukcesem!</h5>
+                <p>Jeden z naszych przedstawicieli skontaktuje się z Tobą wkrótce.</p>
+
+                <h5>Szczegóły konta:</h5>
+
+                <ul class="list-unstyled p-0 m-0">
+                    <li>
+                        <b>{{strings.nxReg_i18n_SignUp_Email}}:</b> {{storage.email}}
+                    </li>
+                    <li>
+                        <b>{{strings.nxReg_i18n_SignUp_Password}}:</b> {{storage.password}}
+                    </li>
+                </ul>
+
+                <p class="mt-3" style="font-size: 14px;">
+                    Proszę zachować te informacje. <br />
+                    W międzyczasie, śmiało przeglądaj naszą stronę internetową, aby dowiedzieć się więcej o naszej ofercie.
+                </p>
+                <div class="resopnd-buttons">
+                    <a href="{{storage.redirect}}"
+                    target="_blank" class="btn  btn-block respond-btn">
+                    ZBADAJ TERAZ
+                </a>
+                    <a target="_blank" class="btn  btn-block respond-btn download" > POBIERZ E-BOOK</a>
+                    <div class="progress d-none">
+                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </script>
+
+    <script id="nxreg-loader-template" type="text/x-handlebars-template">
+        <div class="preloader nxreg-loader">
+            <div class="loader">
+                <div class="loader__bar loaderOne"></div>
+                <div class="loader__bar loaderTwo"></div>
+                <div class="loader__bar loaderThree"></div>
+                <div class="loader__bar loaderFour"></div>
+                <div class="loader__bar loaderFive"></div>
+                <div class="loader__ball"></div>
+            </div>
+        </div>
+    </script>
+
+    <!-- Helpers Js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
+
+    <script src="https://www.d-spearhead.com/scripts/legal_data.js" defer></script>
+    <script src="https://www.d-spearhead.com/scripts/helper_002.js" defer></script>
+    <script src="https://www.d-spearhead.com/scripts/plexop_api_2.0.js" defer></script>
+
+    <script src="https://www.d-spearhead.com/nx-scripts/external/handlebars/handlebars.min.js" defer></script>
+    <script src="https://www.d-spearhead.com/nx-scripts/external/intl-tel-input/js/intlTelInput-jquery.min.js"
+        defer></script>
+    <script src="https://www.d-spearhead.com/nx-scripts/nxreg/nxreg.min.js" defer></script>
+    <script src="./scripts/script.min.js" defer></script>
+
+</body>
+
+</html>
