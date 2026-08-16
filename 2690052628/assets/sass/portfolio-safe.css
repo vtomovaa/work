@@ -1,0 +1,25 @@
+.portfolio-demo-note {
+  margin: 0.9rem 0 0;
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.portfolio-demo-message {
+  min-height: 1.4rem;
+  margin: 0.65rem 0 0;
+  color: #167a0d;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#mainRegForm .form-control {
+  margin-bottom: 0.8rem;
+}
+
+#mainRegForm .reg-btn {
+  width: 100%;
+}
