@@ -1,4 +1,4 @@
-.portfolio-demo-note {
+.form-container .portfolio-demo-note {
   margin: 0.9rem 0 0;
   color: #666;
   font-size: 0.75rem;
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.portfolio-demo-message {
+.form-container .portfolio-demo-message {
   min-height: 1.4rem;
   margin: 0.65rem 0 0;
   color: #167a0d;
