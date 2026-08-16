@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A safe portfolio demo of an investment fit quiz by Victoria Tomova.">
+  <title>Investment Fit Quiz — Portfolio Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="demo-note">Portfolio demo · answers stay in your browser</div>
+  <main>
+    <section class="intro">
+      <p class="brand">NORTH<span>FIN</span></p>
+      <div class="intro-copy"><p class="eyebrow">Interactive experience</p><h1>Discover your investment style in <em>30 seconds.</em></h1><p>Answer three simple questions and see a sample profile. No data is sent or stored.</p></div>
+      <div class="stat-card"><strong>3</strong><span>quick questions</span></div>
+    </section>
+
+    <section class="quiz-wrap" aria-labelledby="quiz-title">
+      <div class="quiz-card">
+        <div class="progress"><span id="progressBar"></span></div>
+        <p class="step-label" id="stepLabel">Question 1 of 3</p>
+        <form id="quizForm">
+          <fieldset class="question is-active" data-step="1">
+            <legend id="quiz-title">What is your main goal?</legend>
+            <label><input type="radio" name="goal" value="Growth"> Long-term growth</label>
+            <label><input type="radio" name="goal" value="Balance"> A balanced approach</label>
+            <label><input type="radio" name="goal" value="Stability"> Preserve stability</label>
+          </fieldset>
+          <fieldset class="question" data-step="2">
+            <legend>How do you react to market changes?</legend>
+            <label><input type="radio" name="risk" value="Confident"> I stay focused on the long term</label>
+            <label><input type="radio" name="risk" value="Measured"> I review before I act</label>
+            <label><input type="radio" name="risk" value="Careful"> I prefer smaller changes</label>
+          </fieldset>
+          <fieldset class="question" data-step="3">
+            <legend>Which area interests you most?</legend>
+            <label><input type="radio" name="interest" value="Technology"> Technology</label>
+            <label><input type="radio" name="interest" value="Commodities"> Commodities</label>
+            <label><input type="radio" name="interest" value="Global markets"> Global markets</label>
+          </fieldset>
+          <p class="error" id="errorMessage" role="alert"></p>
+          <div class="actions"><button class="back" id="backButton" type="button" hidden>Back</button><button class="next" id="nextButton" type="button">Continue →</button></div>
+        </form>
+        <div class="result" id="result" hidden>
+          <p class="eyebrow">Sample result</p><h2 id="resultTitle">Balanced explorer</h2><p id="resultText"></p><button id="restartButton" type="button">Restart quiz</button><small>This is a UI demonstration, not financial advice.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Designed and developed as a front-end portfolio demo by Victoria Tomova.</footer>
+</body>
+</html>
