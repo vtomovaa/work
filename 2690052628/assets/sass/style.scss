@@ -35,14 +35,6 @@ body {
   }
 }
 
-body:not(.iti-mobile) {
-  .iti__country-list {
-    white-space: normal;
-    width: 315px;
-    right: 0;
-  }
-}
-
 .desktopForm-container {
   @media screen and (min-width: 768px) {
     max-width: initial;
