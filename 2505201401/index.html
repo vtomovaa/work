@@ -16,39 +16,16 @@
     <link rel="stylesheet" href="assets/lib/iti.min.css">
     <link rel="stylesheet" href="assets/lib/bootstrap.min.css">
     <link rel="stylesheet" href="assets/sass/style.min.css">
+    <link rel="stylesheet" href="assets/sass/portfolio-safe.css">
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.11/dist/css/uikit.min.css" />
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5TB4BK5S');</script>
-    <!-- End Google Tag Manager -->
-
-    <script>
-        var urlVars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-            urlVars[key.toLowerCase()] = value;
-        });
-        if (urlVars['istest']) {
-            location.href = '/aserving/_blank.htm';
-        }
-    </script>
 
     <title>Invest</title>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TB4BK5S" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    
 
     <div id="cmt" hidden></div>
 
@@ -99,9 +76,37 @@
     <main>
         <div class="container mt-3 mt-lg-0 desktopForm-container">
             <section class="form-container mt-lg-4" id="desktopForm">
-                <div class="nxreg">
-                    <div class="nxreg-form-loader-ctr">
-                        <div class="nxreg-form-loader"></div>
+                <div class="nx-signup nxreg-form">
+                    <div class="nx-signup-form nx-signup__form">
+                        <form autocomplete="off" action="#" id="mainForm" class="nxreg-sign-up-form needs-validation main-form">
+                            <div class="form-heading-ctr">
+                                <h2 class="text-center">Enter the world of endless possibilities in online trading</h2>
+                            </div>
+                            <div class="form-wrapper user-inputs row">
+                                <div class="col-12">
+                                    <div class="form-group nx-form-group">
+                                        <input type="text" class="form-control form-control-lg" id="fullname" placeholder="Full name" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group nx-form-group">
+                                        <input type="email" class="form-control form-control-lg" id="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group nx-form-group">
+                                        <input type="tel" class="form-control form-control-lg" id="phone-number" placeholder="Phone number" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group lp-main_btn mb-3">
+                                        <button type="submit" class="reg-btn">Start now</button>
+                                    </div>
+                                    <p class="demo-form-note">Portfolio demo — this form does not send or store data.</p>
+                                    <p id="demoFormMessage" class="demo-form-message" role="status"></p>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -378,219 +383,10 @@
             </div>
         </div>
     </main>
-
-    <script id="nxreg-sign-up-template" type="text/x-handlebars-template">
-        <div class="nx-signup nxreg-form">
-            <!-- <span class="close-popUpForm"><img src="./images/ic_cancel.png" alt="close popup icon"></span> -->
-            <div class="nx-signup-form nx-signup__form">
-                <form autocomplete="off" method="post" action="#" id="mainForm" class="nxreg-sign-up-form needs-validation main-form" novalidate>
-                    <input type="hidden" name="recaptcha-token" id="recaptcha-token" value="" />
-                    <div class="form-heading-ctr">
-                        <h2 class="text-center">Enter the world of endless possibilities in online trading</h2>
-                    </div>
-                    <div class="form-wrapper user-inputs row">
-                        <div class="col-12">
-                            {{#ifEquals settings.nxReg_FullName "true"}}
-                            <div class="form-group nx-form-group">
-                                <!-- <label for="fullname" class="">{{strings.nxReg_i18n_SignUp_FullName}}</label> -->
-                                <!-- <span class="icons user"></span> -->
-                                <input autocomplete="false" type="text" class="form-control form-control-lg nxreg-sign-up-full-name" id="fullname" name="RegistrationModel.FullName" placeholder="{{strings.nxReg_i18n_SignUp_FullName}}" pattern="{{settings.nxReg_Validation_FullNameRegEx}}" required>
-                                <div class="invalid-feedback">
-                                    {{strings.nxReg_i18n_SignUp_FullNameError}}
-                                </div>
-                            </div>
-                            {{/ifEquals}}
-                        </div>
-                        <div class="col-12">
-                            <div class="form-group nx-form-group">
-                                <!-- <label for="email" class="">{{strings.nxReg_i18n_SignUp_Email}}</label> -->
-                                <!-- <span class="icons mail"></span> -->
-                                <input autocomplete="false" type="email" class="form-control form-control-lg nxreg-sign-up-email" id="email" name="RegistrationModel.Email" placeholder="{{strings.nxReg_i18n_SignUp_Email}}" pattern="{{settings.nxReg_Validation_EmailRegEx}}" dir="ltr" required>
-                                <div class="invalid-feedback">
-                                    {{strings.nxReg_i18n_SignUp_EmailWrongFormatError}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            {{#ifEquals settings.nxReg_PhoneNumber "true"}}
-                                <div class="form-group nxreg-sign-up-phone-number-wrapper">
-                                    <!-- <label for="phone-number" class="">{{strings.nxReg_i18n_SignUp_PhoneNumber}}</label> -->
-                                    <div class="input-group">
-                                        <!-- <span class="icons phone"></span> -->
-                                        
-                                        <input type="tel" class="form-control form-control-lg nxreg-sign-up-phone-number" id="phone-number" placeholder="{{strings.nxReg_i18n_SignUp_PhoneNumber}}" required>
-                                        <div class="invalid-feedback nxreg-sign-up-phone-number-error">
-                                            {{strings.nxReg_i18n_SignUp_PhoneNumberErrors.[4]}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {{/ifEquals}}
-                        </div>
-                        <!-- <div class="col-12">
-                            {{#ifEquals settings.nxReg_Country "true"}}
-                                <div class="form-group nx-form-group">
-                                    <label for="country" class="">{{strings.nxReg_i18n_SignUp_Country}}</label>
-                                    <span class="icons location"></span>
-                                    <select class=" form-control custom-select custom-select-lg nxreg-sign-up-country" id="country" required></select>
-                                    <div class="invalid-feedback">
-                                        {{strings.nxReg_i18n_SignUp_CountryError}}
-                                    </div>
-                                </div>
-                            {{/ifEquals}}
-                        </div> -->
-
-                        <div class="col-12 d-none">
-                            {{#ifEquals settings.nxReg_PrivacyNoticeCheckbox "true"}}
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">         
-                                    <input type="checkbox" checked class="custom-control-input" id="privacy-notice" name="RegistrationModel.PrivacyNotice" required checked>
-                                    <label class="switch mt-1" for="privacy-notice">
-                                        <span class="slider round"></span>
-                                    </label>
-                                    <!-- <label class="custom-control-label" for="privacy-notice">{{{settings.nxReg_PrivacyNoticeText}}}</label> -->
-                                    <span class="terms-link col" for="privacy-notice" data-lgl="normal-terms"></span>
-                                    <div class="invalid-feedback mt-2">
-                                        {{strings.nxReg_i18n_SignUp_PrivacyNoticeNotAcceptedError}}
-                                    </div>
-                                </div>
-                            </div>
-                            {{else}}
-                            <div class="form-group">
-                                <div class="mt-4 mb-4">
-                                    {{{settings.nxReg_PrivacyNoticeText}}}
-                                </div>
-                            </div>
-                            {{/ifEquals}}
-                        </div>
-                        <div class="col-12">
-                            <div class="form-group lp-main_btn mb-3">
-                                <button type="submit" class="reg-btn ">Start now</button>
-                            </div>
-                            {{#ifEquals settings.nxReg_VerificationCode "true"}}
-                            <div class="row">
-                                <div class="col-12 vcwrp-1">
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="verification-code-toggle">
-                                            <label class="custom-control-label nxreg-sign-up-verification-code-toggle" for="verification-code-toggle">{{strings.nxReg_i18n_SignUp_VerificationCodeToggle}}</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="vcwrp-2">
-                                    <div class="form-group nxreg-sign-up-verification-code-wrapper d-none">
-                                        <label for="verification-code" class=""></label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control nxreg-sign-up-verification-code" id="verification-code" pattern="{{settings.nxReg_Validation_VerificationCode}}" placeholder="">
-                                            <div class="invalid-feedback nxreg-sign-up-verification-code-error">
-                                                {{strings.nxReg_i18n_SignUp_VerificationCodeError}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{/ifEquals}}
-                        </div>
-                        <div class="col-12">
-                            <div id="msgContainer" class="nxreg-server-error-wrapper"></div>
-                        </div>        
-                       
-                        <!-- <div class="col-12">
-                            <p class="cfd px-0">To invest online you must be at least 18 years old. Minimum investment 260 SGD.
-                            </p>
-                        </div> -->
-                        <!-- {{#ifEquals settings.nxReg_AutoPassword "false"}}
-                        <div class="form-group nx-form-group password-eye">
-                            <span class="password-eye__icon"></span>
-                            <label for="password" class="">{{strings.nxReg_i18n_SignUp_Password}}</label>
-                            <input autocomplete="disabled" type="password" class="form-control" id="password" placeholder="{{strings.nxReg_i18n_SignUp_Password}}" required>
-                            <div class="invalid-feedback">
-                                {{strings.nxReg_i18n_SignUp_PasswordWrongError}}
-                            </div>
-                        </div>
-                        {{/ifEquals}} -->       
-                    </div>
-                </form>
-            </div>
-        </div>
-    </script>
-    <script id="nxreg-thankYou-wl-template" type="text/x-handlebars-template">
-        <div class="overlay" id="thankYouPage" style="display: block;">
-                <div class="container px-0 d-flex align-items-center">
-                    <div class="row thank-you-msg d-flex align-items-center">
-                        <div class=" col-12 col-lg-4 img-wrapp order-1 order-lg-2">
-                            <img src="./images/thanks-img.png" class="img-fluid" alt="thank you img">
-                        </div>
-                        <div class="col-12 col-lg-8 msg-wrapp order-2 order-lg-1">
-                            <br class="d-none d-lg-block">
-                            <h3> CONGRATULATIONS </h3>
-                            <br>
-                            <p>Thank you for registering <br> You’ll be contacted within <strong>24/48 hours</strong> </p>
-                            
-                            <p>Watch your phone! <img src="./images/emoji.png" alt="emoji img"></p>
-                            <br>
-                            <a href="javascript:window.location.reload(true)" class="confirm" id="confirm"><strong>OK</strong></a>
-                            <br><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </script>
-
-    <script id="nxreg-sign-up-password-template" type="text/x-handlebars-template">
-        <div class="nx-signup  respond-card">
-
-        <div class="nx-signup-form nx-signup__form card-respond-wrapper">
-            <h3 class="nx-signup__form__heading respond-header">{{{strings.nxReg_i18n_SignUp_Password_Title}}}</h3>
-            <br>
-            <div class="mb-4 respond-body">
-                <div class="card-body">
-                    <div class="d-inline">
-                        <b class="d-block">{{strings.nxReg_i18n_SignUp_Email}}:</b> {{storage.email}}
-                    </div>
-                    <br>
-                    <div class="d-inline text-align-centr">
-                        <b>{{strings.nxReg_i18n_SignUp_Password}}:</b> {{storage.password}}
-                    </div>
-                </div>
-            </div>
-
-            <h5 class="nx-signup__form__heading text-center">{{strings.nxReg_i18n_SignUp_Password_SubTitle}}</h5>
-           
-            <a target="_blank" class="btn  btn-block respond-btn" href="{{storage.redirect}}">{{strings.nxReg_i18n_SignUp_Password_Button}}</a>
-    <br><br>
-        </div>
-    </div>
-    </script>
-
-    <script id="nxreg-loader-template" type="text/x-handlebars-template">
-        <div class="preloader nxreg-loader">
-            <div class="loader">
-                <div class="loader__bar loaderOne"></div>
-                <div class="loader__bar loaderTwo"></div>
-                <div class="loader__bar loaderThree"></div>
-                <div class="loader__bar loaderFour"></div>
-                <div class="loader__bar loaderFive"></div>
-                <div class="loader__ball"></div>
-            </div>
-        </div>
-    </script>
-
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.11/dist/js/uikit.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.11/dist/js/uikit-icons.min.js" defer></script>
-
-
-    <!-- Helpers Js -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
-
-    <script src="./scripts/helper_002.js" defer></script>
-    <script src="./scripts/plexop_api_2.0.js" defer></script>
-    <script src="./scripts/handlebars.min.js" defer></script>
-    <script src="./scripts/intlTelInput-jquery.min.js" defer></script>
-    <script src="./scripts/nxreg.js" defer></script>
-    <script src="./scripts/script.min.js" defer></script>
-    <script src="./scripts/trackbox.js" defer></script>
+    <script src="./scripts/portfolio-safe.js" defer></script>
 
     </div>
 </body>
