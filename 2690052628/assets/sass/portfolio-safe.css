@@ -54,3 +54,9 @@
   margin: 0.35rem 1rem 0.55rem;
   font-size: 0.72rem;
 }
+
+@media screen and (min-width: 1200px) {
+  .form-container {
+    top: 2rem;
+  }
+}
