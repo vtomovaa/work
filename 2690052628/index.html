@@ -10,36 +10,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&display=swap" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap" rel="stylesheet"> -->
-
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"> -->
 
 
     <!-- Page css -->
     <link rel="stylesheet" href="assets/lib/iti.min.css">
     <link rel="stylesheet" href="assets/lib/bootstrap.min.css">
     <link rel="stylesheet" href="assets/sass/style.min.css">
-
-
-    <script>
-        var urlVars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-            urlVars[key.toLowerCase()] = value;
-        });
-        if (urlVars['istest']) {
-            location.href = '/aserving/_blank.htm';
-        }
-    </script>
-
-    <title>Invest</title>
+    <link rel="stylesheet" href="assets/sass/portfolio-safe.css">
+<title>Invest</title>
 </head>
 
 <body>
-
-    <div id="cmt" hidden></div>
-    <header>
+<header>
         <div class="header container-fluid h-100">
             <div class="container-content container-fluid">
                 <picture>
@@ -57,7 +41,7 @@
                 <div class="content-wrapper">
                     <div class="content lp-action mb-sm-0">
                         <h1>
-                            CADA CAÍDA </br>FUE SEGUIDA
+                            CADA CAÍDA <br>FUE SEGUIDA
                         </h1>
                         <h2>
                             DE <strong>+400%</strong> A <strong>+10,000%</strong>
@@ -95,9 +79,60 @@
 
         <div class="container mt-3 mt-lg-0 desktopForm-container">
             <section class="form-container mt-lg-3" id="desktopForm">
-                <div class="nxreg">
-                    <div class="nxreg-form-loader-ctr">
-                        <div class="nxreg-form-loader"></div>
+                <div class="nx-signup nxreg-form">
+                    <div class="nx-signup-form nx-signup__form">
+                        <form id="mainRegForm" class="nxreg-sign-up-form needs-validation main-form"
+                            autocomplete="off" action="#" onsubmit="return false">
+                            <div class="form-heading-ctr">
+                                <h2 class="text-center">
+                                    Tu Nombre + Tu Email
+                                    <br class="d-block d-md-none d-xl-block">
+                                    = Tu Entrada
+                                </h2>
+                                <p class="text-center">
+                                    Recibe una vista de demostración del formulario.
+                                </p>
+                            </div>
+
+                            <div class="form-wrapper user-inputs pt-3 row" style="flex-direction: column;">
+                                <div class="col-12">
+                                    <div class="form-group nx-form-group">
+                                        <input class="form-control form-control-lg nxreg-sign-up-full-name"
+                                            type="text" id="fullname" placeholder="Nombre completo" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group nx-form-group">
+                                        <input class="form-control form-control-lg nxreg-sign-up-email"
+                                            type="email" id="email" placeholder="Correo electrónico" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group nxreg-sign-up-phone-number-wrapper">
+                                        <div class="input-group">
+                                            <input class="form-control form-control-lg nxreg-sign-up-phone-number"
+                                                type="tel" id="phone-number" placeholder="Número de teléfono" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group lp-main_btn mb-1">
+                                        <button type="button" class="reg-btn" id="demo-submit">
+                                            Entrar a la Plataforma →
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="portfolio-demo-note">
+                                Demostración de portafolio. Este formulario no envía ni guarda datos.
+                            </p>
+                            <p class="portfolio-demo-message" id="demo-form-message"
+                                role="status" aria-live="polite"></p>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -253,10 +288,6 @@
                 <div class="row">
                     <div class="col-12  column-1-reverse d-flex">
                         <div class="tradingview-widget-container w-100 my-auto">
-                            <!-- <div id="tradingview_25911"><iframe id="tradingview_fc9d6"
-                                    src="https://s.tradingview.com/embed-widget/symbol-overview/?locale=en#%7B%22symbols%22%3A%5B%5B%22GOOG%22%2C%22NASDAQ%3AGOOG%22%5D%5D%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22400px%22%2C%22colorTheme%22%3A%22light%22%2C%22gridLineColor%22%3A%22%23F0F3FA%22%2C%22fontColor%22%3A%22%23787B86%22%2C%22chartType%22%3A%22area%22%2C%22lineColor%22%3A%22%232196F3%22%2C%22topColor%22%3A%22%23E3F2FD%22%2C%22page-uri%22%3A%22static-plexop.s3.amazonaws.com%2Faserving%2F4%2F1%2Fblg%2F1%2Fpl%2FWEBCR-3131%2Findex.html%22%2C%22utm_source%22%3A%22static-plexop.s3.amazonaws.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22symbol-overview%22%7D"
-                                    style="margin: 0 !important; padding: 0 !important; width: 100%; height: 400px;"
-                                    frameborder="0" allowtransparency="true" scrolling="no"></iframe></div> -->
                             <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                             <script type="text/javascript">
                                 new TradingView.MediumWidget({
@@ -527,209 +558,8 @@
                 CALCULAR MI GANANCIA HOY </button>
         </div>
 
-        <script id="nxreg-sign-up-template" type="text/x-handlebars-template">
-        <div class="nx-signup nxreg-form">
-            <div class="nx-signup-form nx-signup__form">
-                <form autocomplete="off" method="post" action="#" id="mainRegForm" class="nxreg-sign-up-form needs-validation main-form" novalidate>
-                    <input type="hidden" name="recaptcha-token" id="recaptcha-token" value="" />
-
-                    <div class="form-heading-ctr">
-                        <h2 class="text-center">
-                       Tu Nombre + Tu Email <br class="d-block d-md-none d-xl-block">
-                        = Tu Entrada          
-                         </h2>
-
-                         <p class="text-center">
-                            Recibe acceso instantáneo<br class="d-block d-md-none d-xl-block"> al trading en vivo.
-                         </p>
-                    </div>
-
-                    <div class="form-wrapper user-inputs pt-3 row" style="flex-direction: column;">
-                        <div class="col-12 col-md-4 col-xl-12 order-md-1">
-                            {{#ifEquals settings.nxReg_FullName "true"}}
-                            <div class="form-group nx-form-group">
-                                <input autocomplete="false" type="text" class="form-control form-control-lg nxreg-sign-up-full-name" id="fullname" name="RegistrationModel.FullName" placeholder="{{strings.nxReg_i18n_SignUp_FullName}}" pattern="{{settings.nxReg_Validation_FullNameRegEx}}" required>
-                                <div class="invalid-feedback">
-                                    {{strings.nxReg_i18n_SignUp_FullNameError}}
-                                </div>
-                            </div>
-                            {{/ifEquals}}
-                        </div>
-
-                        <div class="col-12 col-md-4 col-xl-12 order-md-2 order-xl-2">
-                            <div class="form-group nx-form-group">
-                                <input autocomplete="false" type="email" class="form-control form-control-lg nxreg-sign-up-email" id="email" name="RegistrationModel.Email" placeholder="{{strings.nxReg_i18n_SignUp_Email}}" pattern="{{settings.nxReg_Validation_EmailRegEx}}" dir="ltr" required>
-                                <div class="invalid-feedback">
-                                    {{strings.nxReg_i18n_SignUp_EmailWrongFormatError}}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-4 col-xl-12 order-md-3 order-xl-3">
-                            {{#ifEquals settings.nxReg_PhoneNumber "true"}}
-                                <div class="form-group nxreg-sign-up-phone-number-wrapper">
-                                    <div class="input-group">
-                                        <input type="tel" class="form-control form-control-lg nxreg-sign-up-phone-number" id="phone-number" placeholder="{{strings.nxReg_i18n_SignUp_PhoneNumber}}" required>
-                                        <div class="invalid-feedback nxreg-sign-up-phone-number-error">
-                                            {{strings.nxReg_i18n_SignUp_PhoneNumberErrors.[4]}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {{/ifEquals}}
-                        </div>
-
-                        <div class="col-12 col-md-4 col-xl-12 order-md-4 order-xl-4 d-none">
-                            {{#ifEquals settings.nxReg_Country "true"}}
-                                <div class="form-group nx-form-group country">
-                                    <span class="icons location"></span>
-                                    <select class=" form-control custom-select custom-select-lg nxreg-sign-up-country" id="country" required></select>
-                                    <div class="invalid-feedback">
-                                        {{strings.nxReg_i18n_SignUp_CountryError}}
-                                    </div>
-                                </div>
-                            {{/ifEquals}}
-                        </div>
-
-                        <div class="col-12 col-md-4 col-xl-12 order-md-5 order-xl-5">
-                            <!-- {{#ifEquals settings.nxReg_PrivacyNoticeCheckbox "true"}} -->
-                            <!-- <div class="form-group">
-                                <div class="custom-control custom-checkbox"> -->
-                                    <!-- <input type="checkbox" class="custom-control-input" id="privacy-notice" name="RegistrationModel.PrivacyNotice" checked required>
-                                    <label class="switch mt-1 mt-md-0 mt-xl-1" for="privacy-notice">
-                                        <span class="slider round"></span>
-                                    </label>
-                                    <span class="terms-link col" data-lgl="normal-terms" for="privacy-notice"> I Agree</span>
-                                    <div class="invalid-feedback mt-2">
-                                        {{strings.nxReg_i18n_SignUp_PrivacyNoticeNotAcceptedError}}
-                                    </div> -->
-                                <!-- </div> -->
-                            <!-- </div>
-                            {{else}}
-                            <div class="form-group"> -->
-                                <!-- <div class="mt-4 mb-4">
-                                    {{{settings.nxReg_PrivacyNoticeText}}}
-                                </div> -->
-                            <!-- </div> -->
-                            <!-- {{/ifEquals}} -->
-                        </div>
-
-                        <div class="col-12 col-md-4 col-xl-12 order-md-6 order-xl-6">
-                            <div class="form-group lp-main_btn mb-1">
-                                <button type="submit" class="reg-btn" id="submit_button">Entrar a la Plataforma →</button>
-                            </div>
-
-                            {{#ifEquals settings.nxReg_VerificationCode "true"}}
-                            <div class="row">
-                                <div class="col-12 vcwrp-1">
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="verification-code-toggle">
-                                            <label class="custom-control-label nxreg-sign-up-verification-code-toggle" for="verification-code-toggle">{{strings.nxReg_i18n_SignUp_VerificationCodeToggle}}</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="vcwrp-2">
-                                    <div class="form-group nxreg-sign-up-verification-code-wrapper d-none">
-                                        <label for="verification-code" class=""></label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control nxreg-sign-up-verification-code" id="verification-code" pattern="{{settings.nxReg_Validation_VerificationCode}}" placeholder="">
-                                            <div class="invalid-feedback nxreg-sign-up-verification-code-error">
-                                                {{strings.nxReg_i18n_SignUp_VerificationCodeError}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{/ifEquals}}
-                        </div>
-
-                        <div class="col-12 server-error-body align-self-center order-md-9 order-xl-7">
-                            <div id="msgContainer" class="nxreg-server-error-wrapper"></div>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-    </script>
-
-        <script id="nxreg-thankYou-wl-template" type="text/x-handlebars-template">
-        <div class="overlay" id="thankYouPage" style="display: block;">
-                <div class="container px-0 d-flex align-items-center">
-                    <div class="row thank-you-msg d-flex align-items-center">
-                        <div class=" col-12 col-lg-4 img-wrapp order-1 order-lg-2">
-                            <img src="./images/thanks-img.png" class="img-fluid" alt="thank you img">
-                        </div>
-                        <div class="col-12 col-lg-8 msg-wrapp order-2 order-lg-1">
-                          <br class="d-none d-lg-block">
-                          <h3> ENHORABUENA </h3>
-                          <br>
-                          <p>Gracias por registrarse. <br> Será contactado en <strong>24/48 horas</strong></p>
-                          
-                          <p>¡Mire su teléfono! <img src="./images/emoji.png" alt="emoji img"></p>
-                          <br>
-                          <a href="javascript:window.location.reload(true)" class="confirm" id="confirm"><strong>OK</strong></a>
-                          <br><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </script>
-
-        <script id="nxreg-sign-up-password-template" type="text/x-handlebars-template">
-        <div class="nx-signup  respond-card">
-
-        <div class="nx-signup-form nx-signup__form card-respond-wrapper">
-            <h3 class="nx-signup__form__heading respond-header">{{{strings.nxReg_i18n_SignUp_Password_Title}}}</h3>
-            <br>
-            <div class="mb-4 respond-body">
-                <div class="card-body">
-                    <div class="d-inline">
-                        <b class="d-block">{{strings.nxReg_i18n_SignUp_Email}}:</b> {{storage.email}}
-                    </div>
-                    <br>
-                    <div class="d-inline text-align-centr">
-                        <b>{{strings.nxReg_i18n_SignUp_Password}}:</b> {{storage.password}}
-                    </div>
-                </div>
-            </div>
-
-            <h5 class="nx-signup__form__heading text-center">{{strings.nxReg_i18n_SignUp_Password_SubTitle}}</h5>
-
-            <a target="_blank" class="btn  btn-block respond-btn" href="{{storage.redirect}}">{{strings.nxReg_i18n_SignUp_Password_Button}}</a>
-    <br><br>
-        </div>
-    </div>
-    </script>
-
-        <script id="nxreg-loader-template" type="text/x-handlebars-template">
-        <div class="preloader nxreg-loader">
-            <div class="loader">
-                <div class="loader__bar loaderOne"></div>
-                <div class="loader__bar loaderTwo"></div>
-                <div class="loader__bar loaderThree"></div>
-                <div class="loader__bar loaderFour"></div>
-                <div class="loader__bar loaderFive"></div>
-                <div class="loader__ball"></div>
-            </div>
-        </div>
-    </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-        <!-- Helpers Js -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
-
-        <script src="./scripts/helper_002.js" defer></script>
-        <script src="./scripts/plexop_api_2.0.js" defer></script>
-        <script src="./scripts/handlebars.min.js" defer></script>
-        <script src="./scripts/intlTelInput-jquery.min.js" defer></script>
-        <script src="./scripts/nxreg.js" defer></script>
-        <script src="./scripts/script.min.js" defer></script>
-        <script src="./scripts/trackbox.js" defer></script>
-
-        </div>
+        <script src="./scripts/portfolio-safe.js?v=1" defer></script>
+    </main>
 </body>
 
 </html>
